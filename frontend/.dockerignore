@@ -1,0 +1,28 @@
+Dependencies
+
+node_modules
+**/node_modules
+npm-debug.log
+
+Build/Dist Artifacts (ควรถูก Build ใน Docker เท่านั้น)
+
+dist
+.quasar
+.output
+
+OS/Editor Files
+
+.DS_Store
+Thumbs.db
+
+Logs
+
+logs
+*.log
+
+Editor/Tooling Configs (บางตัวถูก copy ไปแล้ว)
+
+.vscode
+.idea
+.git
+.gitignore
