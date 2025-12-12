@@ -1,7 +1,7 @@
-// Configuration for your app
-// https://v2.quasar.dev/quasar-cli-vite/quasar-config-file
-
 import { defineConfig } from '#q-app/wrappers'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 export default defineConfig((/* ctx */) => {
   return {
@@ -12,6 +12,10 @@ export default defineConfig((/* ctx */) => {
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
     boot: [],
+
+    env: {
+      API_URL: process.env.API_URL || 'http://localhost:3000',
+    },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
     css: ['app.scss'],

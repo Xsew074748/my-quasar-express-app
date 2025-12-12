@@ -39,6 +39,14 @@ app.get('/api/demo', (req, res) => {
     });
 });
 
+// Import Service.js
+const studentService = require('./Service');
+
+// Endpoint: Return Student Info
+app.get('/api/student', (req, res) => {
+    res.json(studentService);
+});
+
 
 // Error handling
 app.use((err, req, res, next) => {
